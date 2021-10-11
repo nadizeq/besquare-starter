@@ -11,6 +11,12 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
   </head>
   <body>
@@ -29,53 +35,61 @@
         </div>
         <div id="timer">0:00</div>
       </div>
-      <div class="target-box">
-        <div class="target-card">A</div>
-        <div class="target-card">G</div>
-        <div class="target-card">A</div>
-        <div class="target-card active">G</div>
-        <div class="target-card"></div>
-        <div class="target-card"></div>
-        <div class="target-card"></div>
+
+      <!--Target Container Section Begins!-->
+      <div class="target-parent">
+        <div class="target-container">
+          <div class="target-card">A</div>
+          <div class="target-card">G</div>
+          <div class="target-card">A</div>
+          <div class="target-card-active">G</div>
+          <div class="target-card-correct">G</div>
+          <div class="target-card-wrong">G</div>
+          <div class="target-card-timeout">G</div>
+        </div>
       </div>
-      <div class="key-box">
+      <!--Target Container Section Ends!-->
+
+      <!--Key Container Section Begins!-->
+      <div class="key-container">
         <div id="clap" class="key-card">
           <div class="header">A</div>
-          <div class="content">Clap</div>
+          <div class="content">CLAP</div>
         </div>
         <div id="hi_hat" class="key-card">
           <div class="header">S</div>
-          <div class="content">Hi Hat</div>
+          <div class="content">HI HAT</div>
         </div>
         <div id="kick" class="key-card">
           <div class="header">D</div>
-          <div class="content">Kick</div>
+          <div class="content">KICK</div>
         </div>
         <div id="open_hat" class="key-card">
           <div class="header">F</div>
-          <div class="content">Open Hat</div>
+          <div class="content">OPEN HAT</div>
         </div>
         <div id="boom" class="key-card">
           <div class="header">G</div>
-          <div class="content">Boom</div>
+          <div class="content">BOOM</div>
         </div>
         <div id="ride" class="key-card">
           <div class="header">H</div>
-          <div class="content">Ride</div>
+          <div class="content">RIDE</div>
         </div>
         <div id="snare" class="key-card">
           <div class="header">J</div>
-          <div class="content">Snare</div>
+          <div class="content">SNARE</div>
         </div>
         <div id="tom" class="key-card">
           <div class="header">K</div>
-          <div class="content">Tom</div>
+          <div class="content">TOM</div>
         </div>
         <div id="tink" class="key-card">
           <div class="header">L</div>
-          <div class="content">Tink</div>
+          <div class="content">TINK</div>
         </div>
       </div>
+      <!--Key Container Section Ends!-->
     </div>
   </body>
 </html>
