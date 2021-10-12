@@ -24,7 +24,7 @@ function makeSound(key) {
     case "a":
       var clap = new Audio("/sounds/clap.wav");
       clap.play();
-      break;
+      this.break;
 
     case "s":
       var hi_hat = new Audio("/sounds/hi_hat.wav");
@@ -341,5 +341,5 @@ function reset() {
   clearTarget();
   defaultTarget();
   play_btn.innerText = "Start Game";
-  play_btn1.innerText = "End Game";
+  play_btn1.innerText = "Free Play";
 }
