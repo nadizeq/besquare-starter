@@ -17,14 +17,14 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
+    <title>Drum App</title>
   </head>
   <body>
     <nav>
       <div class="app-logo">Drum App</div>
       <div class="menu">
-        <button>Start Game</button>
-        <button>Free Play</button>
+        <button id="SG">Start Game</button>
+        <button id="FP">Free Play</button>
       </div>
     </nav>
     <div class="main-content">
@@ -33,7 +33,7 @@
           Score
           <div id="score">0</div>
         </div>
-        <div id="timer">0:00</div>
+        <div id="timer">00:00</div>
       </div>
 
       <!--Target Container Section Begins!-->
@@ -42,10 +42,10 @@
           <div class="target-card">A</div>
           <div class="target-card">G</div>
           <div class="target-card">A</div>
-          <div class="target-card-active">G</div>
-          <div class="target-card-correct">G</div>
-          <div class="target-card-wrong">G</div>
-          <div class="target-card-timeout">G</div>
+          <div class="target-card active">G</div>
+          <div class="target-card correct"></div>
+          <div class="target-card wrong"></div>
+          <div class="target-card timeout"></div>
         </div>
       </div>
       <!--Target Container Section Ends!-->
@@ -91,5 +91,7 @@
       </div>
       <!--Key Container Section Ends!-->
     </div>
+
+    <script src="/main.js"></script>
   </body>
 </html>

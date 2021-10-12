@@ -1,0 +1,51 @@
+//display value to for the key to match at middle value
+const quoteDisplayElement = document.getElementById("target-card-active");
+//element at the show matches
+const typingKey = document.getElementById("target-card");
+
+typingKey.addEventListener("inpukeypress", () => {
+  const arrayQuote = quoteDisplayElement.querySelectorAll("span");
+  console.log(arrayQuote);
+  const arrayValue = quoteInputElement.value.split("");
+
+  let correct = true;
+  arrayQuote.forEach((characterSpan, index) => {
+    const character = arrayValue[index];
+    if (character == null) {
+      characterSpan.classList.remove("correct");
+      characterSpan.classList.remove("incorrect");
+      correct = false;
+    } else if (character === characterSpan.innerText) {
+      characterSpan.classList.add("correct");
+      characterSpan.classList.remove("incorrect");
+    } else {
+      characterSpan.classList.remove("correct");
+      characterSpan.classList.add("incorrect");
+      correct = false;
+    }
+  });
+
+  if (correct) renderNewKey();
+});
+
+function getKeyArray() {
+  const keyMusic = ["A", "S", "D", "F", "G", "H", "J", "K", "L"];
+  const randomElement = Math.floor(Math.random() * keyMusic.length);
+  return randomElement;
+}
+async function renderNewKey() {
+  const keyMusic = await getKeyArray();
+  quoteDisplayElement.innerHTML = "";
+  keyMusic.split("").forEach((character) => {
+    const characterSpan = document.createElement("span");
+    characterSpan.innerText = character;
+    quoteDisplayElement.appendChild(characterSpan);
+  });
+  quoteInputElement.value = null;
+}
+
+/*const free_playBtn = document.getElementById("FP");
+free_playBtn.addEventListener("click", function (event) {
+  startTimer();
+});
+*/
